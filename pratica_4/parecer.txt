@@ -1,0 +1,90 @@
+Pairplot:
+cada ponto é um paciente, mas na maior parte do gráfico não mostra uma correlação visível
+tem alguns outliers
+valores estranhos em Age
+
+Matriz de correlação:
+I e SN -> 0.41 -> quando uma aumenta a outra aumenta também
+correlações muito fracas ou inexistentes
+Aparentemente idade não tem muita influência nas medidas da retina assim como gênero
+
+Pearson e Spearman:
+Pearson quase nulos ou seja sem relação
+Spearman muita correlação entre as medidas do olho, faz sentido né kkkk
+Com isso é melhor focar nessas variáveis para achar subgrupos fortes
+
+
+scores:
+k=2: Silhouette Score = 0.944
+k=3: Silhouette Score = 0.973
+k=4: Silhouette Score = 0.273
+k=5: Silhouette Score = 0.263
+k=6: Silhouette Score = 0.265
+k=7: Silhouette Score = 0.266
+k=8: Silhouette Score = 0.267
+k=9: Silhouette Score = 0.270
+k=10: Silhouette Score = 0.275
+k=11: Silhouette Score = 0.284
+k=12: Silhouette Score = 0.289
+k=13: Silhouette Score = 0.290
+k=14: Silhouette Score = 0.293
+k=15: Silhouette Score = 0.293
+k=16: Silhouette Score = 0.294
+k=17: Silhouette Score = 0.244
+k=18: Silhouette Score = 0.245
+k=19: Silhouette Score = 0.244
+k=20: Silhouette Score = 0.245
+k=21: Silhouette Score = 0.244
+k=22: Silhouette Score = 0.255
+k=23: Silhouette Score = 0.232
+k=24: Silhouette Score = 0.213
+k=25: Silhouette Score = 0.213
+k=26: Silhouette Score = 0.214
+k=27: Silhouette Score = 0.214
+k=28: Silhouette Score = 0.214
+k=29: Silhouette Score = 0.214
+k=30: Silhouette Score = 0.216
+
+---> Atenção no intervalo 13-15
+
+
+Componente 1: 16.07%
+Componente 2: 13.63%
+
+Médias por cluster:
+                C          S        ST  ...        IN         N        SN
+Cluster                                 ...
+0       -0.181140  -0.035875 -0.215163  ... -0.158815 -0.096172 -0.062929
+1        0.031811  -0.120119  0.035752  ... -2.323993 -1.516282 -0.329799
+2        0.258060  54.441817  0.831802  ... -0.332343  0.146770  0.133579
+3        0.290565   0.010120  0.344684  ...  0.256268  0.154930  0.101054
+
+[4 rows x 9 columns]
+
+
+Tamanho de cada cluster:
+Cluster
+0    3007
+1    1007
+2    1806
+3      69
+
+Características médias por cluster:
+                C         S        ST         T  ...         I        IN         N      
+  SN
+Cluster                                          ...
+
+0       -0.092133 -0.042576 -0.097426 -0.123852  ... -0.072307 -0.077983 -0.086448 -0.054494
+1       -0.566944 -1.052004 -1.026742 -0.924747  ... -0.922733 -0.951576 -0.993981 -1.043241
+2        0.710119  0.665843  0.744704  0.741514  ...  0.650273  0.687519  0.707237  0.672536
+3       -6.297361 -0.219091 -0.261557 -0.514967  ... -0.402519 -0.709091 -0.237435 -0.002796
+
+[4 rows x 9 columns]
+
+Silhouette Score para k=4: 0.219
+
+Interpretação sugerida dos clusters:
+Cluster 0: Perfil com valores médios
+Cluster 1: Perfil com valores abaixo da média
+Cluster 2: Perfil com valores acima da média
+Cluster 3: Perfil com padrão misto/distinto
